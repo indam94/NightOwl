@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
-import {FaAlignRight} from 'react-icons/fa'
-import logo from '../resources/img/NightOwlLogo3.png'
+//import {FaAlignRight} from 'react-icons/fa'
+import logo from '../resources/img/NightOwlLogo6.png'
 
 export default class Navbar extends Component {
 
@@ -17,30 +17,34 @@ export default class Navbar extends Component {
 
     render() {
         return (
-            <nav className="navbar">
-                <div className="nav-center">
-                    <div className="nav-header">
-                        <Link to = "/">
-                            <img src={logo} alt = "Night Owl"/>
-                        </Link>
-                        <button 
-                            type='button' 
-                            className="nav-btn"
-                            onClick={this.handleToggle}
-                        >
-                            <FaAlignRight className='nav-icon'></FaAlignRight>
-                        </button>
-                    </div>
-                </div>
+            <nav className="navbar navbar-expand-sm navbar-light bg-dark">
 
-                <ul className={this.state.isOpen? "nav-links show-nav" : "nav-links"}>
-                    <li>
-                        <Link to = '/'>Home</Link>
-                    </li>
-                    <li>
-                        <Link to = '/rooms'>Detail</Link>
-                    </li>
-                </ul>
+                <Link to = "/" className='navbar-brand'>
+                    <img src={logo} alt = "Night Owl"/>
+                </Link>
+                {/* <button 
+                    type='button' 
+                    className="nav-btn"
+                    onClick={this.handleToggle}
+                >
+                    <FaAlignRight className='nav-icon'></FaAlignRight>
+                </button> */}
+
+
+                <div className="collapse navbar-collapse show ml-sm-5">
+                    <ul className="navbar-nav">
+                        <li className='nav-link'>
+                            <Link className='navbar-link' to = '/'>
+                                <p className="text-white bg-dark">Home</p>
+                            </Link>
+                        </li>
+                        <li className='nav-link'>
+                            <Link className='navbar-link' to = '/Detail'>
+                            <p className="text-white bg-dark">Detail</p>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         )
     }
