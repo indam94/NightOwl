@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import {FaAlignRight} from 'react-icons/fa'
+import logo from '../resources/img/NightOwlLogo3.png'
 
 export default class Navbar extends Component {
 
@@ -20,7 +21,7 @@ export default class Navbar extends Component {
                 <div className="nav-center">
                     <div className="nav-header">
                         <Link to = "/">
-                            <img src={logo} alt = "beach resort"/>
+                            <img src={logo} alt = "Night Owl"/>
                         </Link>
                         <button 
                             type='button' 
@@ -37,7 +38,7 @@ export default class Navbar extends Component {
                         <Link to = '/'>Home</Link>
                     </li>
                     <li>
-                        <Link to = '/rooms'>Rooms</Link>
+                        <Link to = '/rooms'>Detail</Link>
                     </li>
                 </ul>
             </nav>
