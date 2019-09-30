@@ -34,13 +34,13 @@ export default class Navbar extends Component {
                 <div className="collapse navbar-collapse show ml-sm-5">
                     <ul className="navbar-nav">
                         <li className='nav-link'>
-                            <Link className='navbar-link' to = '/'>
-                                <p className="text-white bg-dark">Home</p>
+                            <Link className='navbar-link text-white' to = '/'>
+                                Home
                             </Link>
                         </li>
                         <li className='nav-link'>
-                            <Link className='navbar-link' to = '/Detail'>
-                            <p className="text-white bg-dark">Detail</p>
+                            <Link className='navbar-link text-white' to = '/Detail'>
+                                Detail
                             </Link>
                         </li>
                     </ul>
